@@ -8,10 +8,10 @@ A sophisticated web interface for controlling a 6-axis robotic arm with pose sav
 ![photo](output/robot-arm-panel.png)
 ![photo](output/saved-poses.png)
 
-#### `get_run_pose.php` result:
+#### -`get_run_pose.php` result:
 ![photo](output/get_run_pose.png)
 
-#### `update_status.php` result:
+#### -`update_status.php` result:
 ![photo](output/update_pose.png)
 
 
