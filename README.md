@@ -120,25 +120,5 @@ Error: "Cannot connect to MySQL server"
 Solution: Ensure MySQL is running in XAMPP Control Panel
 ```
 
-#### CORS Policy Error
-```
-Error: CORS policy blocks the request
-Solution: Access via localhost, not file:// protocol
-```
-
-#### Pose Data Not Updating
-```
-Issue: get_run_pose.php returns static data
-Solution: Use the updated version provided above
-```
-
-#### Access Denied Error
-```
-Error: "Access denied for user 'root'"
-Solution: Check MySQL credentials in PHP files
-```
-
-
-
 ---
 
