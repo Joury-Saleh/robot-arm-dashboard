@@ -4,6 +4,17 @@
 
 A sophisticated web interface for controlling a 6-axis robotic arm with pose saving and management capabilities.
 
+## web preview
+![photo](robot-arm-panel.png)
+![photo](saved-poses.png)
+
+#### `get_run_pose.php` result:
+![photo](get_run_pose.png)
+
+#### `update_status.php` result:
+![photo](update_pose.png)
+
+
 ## ✨ Features
 
 - 🎛️ **Real-time Control**: Independent control of 6 servo motors (0-180 degrees)
@@ -41,15 +52,14 @@ USE `robot-control-panel`;
 
 -- Create poses table
 CREATE TABLE `poses` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `motor1` int(11) NOT NULL DEFAULT 90,
-  `motor2` int(11) NOT NULL DEFAULT 90,
-  `motor3` int(11) NOT NULL DEFAULT 90,
-  `motor4` int(11) NOT NULL DEFAULT 90,
-  `motor5` int(11) NOT NULL DEFAULT 90,
-  `motor6` int(11) NOT NULL DEFAULT 90,
-  `status` tinyint(1) NOT NULL DEFAULT 0,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `id` int AUTO_INCREMENT,
+  `motor1` smallint UNSIGNED NOT NULL,  -- 0-65,535 range
+  `motor2` smallint UNSIGNED NOT NULL,
+  `motor3` smallint UNSIGNED NOT NULL,
+  `motor4` smallint UNSIGNED NOT NULL,
+  `motor5` smallint UNSIGNED NOT NULL,
+  `motor6` smallint UNSIGNED NOT NULL,
+  `status` tinyint DEFAULT 0,
   PRIMARY KEY (`id`)
 );
 
@@ -129,13 +139,6 @@ Solution: Check MySQL credentials in PHP files
 ```
 
 
-
-## 🔗 Related Projects
-
-- [Arduino Robot Arm Controller](link-to-arduino-project)
-- [ROS Robot Arm Integration](link-to-ros-project)
-- [3D Robot Arm Simulator](link-to-simulator)
-- [Mobile Robot Arm App](link-to-mobile-app)
 
 ---
 
